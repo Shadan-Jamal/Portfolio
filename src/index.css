@@ -1,3 +1,31 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+    font-family: 'Gatte-Regular';
+    src: url('./fonts/GatteModern-Regular.otf');
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gatte-Light';
+    src: url('./fonts/GatteModern-Light.otf');
+    font-style: normal;
+}
+
+.hero-profile-font{
+    font-family: 'Gatte-Regular';
+}
+
+.nav-links{
+    font-family: 'Gatte-Light';
+}
+
+.hero-bg{
+    background-image: url("/images/hero-bg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-color: rgba(0,0,0,0.4);
+    background-blend-mode: overlay;
+}
