@@ -30,7 +30,7 @@ const Nav = () => {
             transition={{duration : 0.4, ease: 'circInOut'}}
             className='flex flex-col light-font'
             >
-                {["About","Projects","Achievements","Contact"].map((item,index) => {
+                {["About","Projects","Achievements"].map((item,index) => {
                     return <motion.h2 key={index} className={`${index === 0 && 'border-y-0'} border-b-[1px] border-y-purple-600 text-[40px] text-center text-white px-3`}>
                         {item}
                     </motion.h2>

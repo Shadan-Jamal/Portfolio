@@ -26,16 +26,8 @@ html{
     font-family: 'Gatte-Light';
 }
 
-/* .hero-bg{
-    background-image: url("/images/hero-bg.jpg");
-    background-size: cover;
-    background-position: center;
-    background-color: rgba(0,0,0,0.4);
-    background-blend-mode: overlay;
-} */
-
 @media screen and (min-width : 768px) {
     body{
-        overflow: hidden;
+        overflow-x: hidden;
     }
 }
