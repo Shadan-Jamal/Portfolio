@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html{
+    scroll-behaviour : smooth;
+}
+
 @font-face {
     font-family: 'Gatte-Regular';
     src: url('./fonts/GatteModern-Regular.otf');
@@ -18,14 +22,20 @@
     font-family: 'Gatte-Regular';
 }
 
-.nav-links{
+.light-font{
     font-family: 'Gatte-Light';
 }
 
-.hero-bg{
+/* .hero-bg{
     background-image: url("/images/hero-bg.jpg");
     background-size: cover;
     background-position: center;
     background-color: rgba(0,0,0,0.4);
     background-blend-mode: overlay;
+} */
+
+@media screen and (min-width : 768px) {
+    body{
+        overflow: hidden;
+    }
 }
