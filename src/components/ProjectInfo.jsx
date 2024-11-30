@@ -71,7 +71,7 @@ const ProjectInfo = ({item , index, setIdx}) => {
           className='hover:cursor-default text-[3.5vw] md:text-lg font-extrabold text-white light-font'>
             {description}<br/><br/>
   
-          <a href={link} className='hover:text-purple-800 hover:underline hover:font-extrabold text-white hero-profile-font'>
+          <a href={link} target="_blank" className='hover:text-purple-800 hover:underline hover:font-extrabold text-white hero-profile-font'>
             Check out the live link!
           </a>
           </motion.p>

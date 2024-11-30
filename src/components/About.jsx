@@ -34,7 +34,7 @@ const About = ({setPage}) => {
           </div>
           <p className='light-font text-white text-xl text-wrap whitespace-pre'>
             <span className='font-extrabold text-purple-500 whitespace-pre'>
-              &lt;Shadan Jamal&gt;</span> I am a computer science student currently in the 3rd year of pursuing my UG degree in Bangalore. 
+              &lt;Shadan Jamal&gt;</span> <br/>I am a computer science student currently in the 3rd year of pursuing my UG degree in Bangalore. 
               I am a passionate learner in the field of Front-End Development, having experience in HTML5, CSS3, Javascript, ReactJS and Framer Motion, leveraging this tech stack to build highly responsive and visually appealing web apps.
           </p>
         </motion.div>
