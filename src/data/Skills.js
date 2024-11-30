@@ -6,6 +6,7 @@ import { FaReact } from "react-icons/fa";
 import { PiFramerLogoFill } from "react-icons/pi";
 import { FaJava } from "react-icons/fa";
 import { FaPython } from "react-icons/fa";
+import { RiTailwindCssFill } from "react-icons/ri";
 
 const skills = [
   {
@@ -17,6 +18,11 @@ const skills = [
     name: 'CSS3',
     level: 90,
     icon: React.createElement(IoLogoCss3, { className : "text-purple-500 text-[12vw] md:text-[5vw]"}),
+  },
+  {
+    name: 'TailwindCSS',
+    level: 70,
+    icon: React.createElement(RiTailwindCssFill, { className : "text-purple-500 text-[12vw] md:text-[5vw]"}),
   },
   {
     name: 'JavaScript/ES6',

@@ -42,7 +42,7 @@ const About = ({setPage}) => {
         {/* Skills */}
         <motion.div 
         transition={{delay: stagger(2)}}
-        className='md:col-span-2 md:row-span-3 col-span-1 max-h-screen py-3 grid md:grid-cols-2 grid-cols-1 md:place-content-end md:gap-3 gap-2 px-3 border-2 border-dashed border-purple-800 rounded-xl'>
+        className='md:col-span-2 md:row-span-3 col-span-1 max-h-screen py-3 grid md:grid-cols-2 grid-cols-1 md:place-content-end md:gap-1 gap-2 px-3 border-2 border-dashed border-purple-800 rounded-xl'>
           {skills.map((skill,index) => {
             return <motion.div key={index} className='flex flex-row items-center flex-wrap gap-4 w-full max-h-fit'>
               {skill.icon ? skill.icon : <h1 className='text-purple-500 md:text-[4rem] text-[12vw] md:w-20 text-center'>C</h1>}
