@@ -29,6 +29,7 @@ const ProjectInfo = ({item , index, setIdx}) => {
             { scale: 1, filter: "blur(0px)" }, 
             { ease: "circInOut", duration: 0.5 }
           );
+
         }
       };
     
@@ -39,8 +40,11 @@ const ProjectInfo = ({item , index, setIdx}) => {
      ref={scope} 
      key={index}
     onHoverStart={() => setProjectHover(true)}
-    onHoverEnd={() => setProjectHover(false)} 
-     className='col-span-1 w-[70%] max-h-full px-3 py-3  rounded-lg grid place-content-center border-[3px] border-slate-400 border-dotted'>
+    onClick={() => window.innerWidth && setProjectHover(!projectHover)}
+    onHoverEnd={() => setProjectHover(false)}
+    initial={{scale : 0}}
+    whileInView={{scale : 1}}
+     className='col-span-1 md:w-[70%] w-[115%] max-h-full px-3 py-3  rounded-lg grid place-content-center border-[3px] border-zinc-400 border-dotted'>
   
       <motion.div 
        className='image relative'>
@@ -50,13 +54,13 @@ const ProjectInfo = ({item , index, setIdx}) => {
   
         {projectHover && <motion.div 
         id='heading' 
-        className={`${projectHover && 'absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-30  w-full  mb-3 flex flex-col justify-center items-center'}`}>
+        className={`${projectHover && 'absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-30  w-full md:mb-3 flex flex-col justify-center items-center gap-3 md:gap-0'}`}>
   
         <motion.div className='flex flex-row justify-center items-center w-full md:mb-5'>
         {name.split("").map((char) => {
           return <motion.span 
             initial={{y : 100, opacity : 0}}
-            className='char text-3xl hero-profile-font text-white font-bold'>{char}
+            className='char md:text-3xl text-[5vw] hero-profile-font text-white font-bold'>{char}
             <DrawLineOverText />
             </motion.span>
           })}
@@ -64,7 +68,7 @@ const ProjectInfo = ({item , index, setIdx}) => {
         
           <motion.p id='image-info'
           initial={{opacity : 0}}
-          className='hover:cursor-default text-lg font-extrabold text-white light-font'>
+          className='hover:cursor-default text-[3.5vw] md:text-lg font-extrabold text-white light-font'>
             {description}<br/><br/>
   
           <a href={link} className='hover:text-purple-800 hover:underline hover:font-extrabold text-white hero-profile-font'>

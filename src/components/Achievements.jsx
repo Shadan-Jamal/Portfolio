@@ -17,9 +17,9 @@ const Achievements = ({setPage}) => {
     className='w-[100dvw] h-auto'>
         <Nav setPage={setPage}/>
         <motion.div
-        className="w-full max-h-[20%] fixed top-0 z-50">
+        className="w-full max-h-[20%] fixed top-0 z-50 backdrop-blur-md">
             <div className='relative w-full h-full'>
-                <motion.h1 className='hero-profile-font md:text-[4vw] text-white text-center py-3'>
+                <motion.h1 className='hero-profile-font text-[10vw] md:text-[4vw] text-white text-center py-3'>
                     My Achievements
                 </motion.h1>
             <motion.div 

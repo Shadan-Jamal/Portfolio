@@ -22,10 +22,10 @@ const Nav = ({setPage}) => {
         }
     },[navbar])
     
-    return <motion.div id='nav' className='absolute right-20 top-10 max-w-[40dvw] max-h-fit z-[9999999]'>
+    return <motion.div id='nav' className='fixed md:right-20 md:top-10 right-5 top-5 max-w-[70dvw] max-h-fit z-[9999999]'>
         <motion.div
         onClick={() => openNavbar(!navbar)}
-        className={`${navbar ? 'rounded-xl flex flex-col' : 'rounded-full'} backdrop-blur-lg pt-2 hover:cursor-pointer`}>
+        className={`${navbar ? 'rounded-xl flex flex-col' : 'rounded-full'} backdrop-blur-sm pt-2 hover:cursor-pointer`}>
             {navbar && <motion.div
             ref={navScope}
             initial={{height: 0}}
@@ -40,7 +40,7 @@ const Nav = ({setPage}) => {
                     initial={{x : -200 ,opacity : 0}}
                     whileHover={{scale : 1.1, color : "violet"}}
                     key={index} 
-                    className={`heading ${index === 0 && 'border-y-0'} border-b-[1px] border-y-purple-600 text-[40px] text-center text-white px-3`}>
+                    className={`heading ${index === 0 && 'border-y-0'} border-b-[1px] border-y-purple-600 text-[5vw] md:text-[2vw] text-center text-white px-3`}>
                         {item}
                     </motion.h2>
                 })}
@@ -51,12 +51,12 @@ const Nav = ({setPage}) => {
             whileHover={{scale : 1.2}}
             className={`text-center p-3 rounded-full ${navbar && 'rounded-full'}`}
             >
-                <IoMdMenu className='text-white hover:text-purple-800' size={"40px"} /> </motion.div> :
+                <IoMdMenu className='text-white hover:text-purple-800 text-[6vw] md:text-[40px]' /> </motion.div> :
                 <motion.div 
                 whileHover={{scale : 1.3, origin : 0}}
                 className={`text-center w-full h-full p-3 ${navbar && 'flex justify-center items-center'}`}
                 >
-                <RxCross1 className='text-white hover:text-purple-800' size={"40px"} />
+                <RxCross1 className='text-white hover:text-purple-800 text-[6vw] md:text-[40px]' />
                 </motion.div>
             }
         </motion.div>

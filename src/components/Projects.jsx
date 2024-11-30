@@ -38,31 +38,31 @@ const Projects = ({setPage}) => {
   },[idx])
 
   return (
-    <section className='md:w-[100vw] md:h-[100vh]'>
+    <section className='w-[100dvw] h-auto md:h-[100dvh] md:overflow-hidden'>
       <Nav setPage={setPage}/>
       <motion.div 
       id="heading" 
       initial={false} 
       animate={{width : 'auto'}} 
-      className='h-fit flex justify-center py-5 border-b-[2px]'>
+      className='sticky top-0 z-50 backdrop-blur-md h-fit flex justify-center py-5 border-b-[2px]'>
         {idx > -1 ? headingWithIcon.map((char,index) => {
         return <motion.span 
         initial={{opacity : 0}}
         animate={{opacity : 1 , transition : {ease : easeOut, duration: 0.2}}}
         exit={{opacity : 0}}
-        key={index} className='text-6xl hero-profile-font text-white font-extrabold mx-2'>
+        key={index} className='md:text-6xl text-[7vw] hero-profile-font text-white font-extrabold mx-[2px] md:mx-2'>
           {char}  
         </motion.span>
       }) : 
       "My Projects".split("").map((char,index) => {
-        return <span key={index} className='text-6xl hero-profile-font text-white font-extrabold mx-2'>
+        return <span key={index} className='md:text-6xl text-[7vw] hero-profile-font text-white font-extrabold md:mx-2 mx-1'>
           {char}  
         </span>
       })
       
       }
       </motion.div>
-      <motion.div className="w-full h-full px-10 pb-5 grid grid-cols-2 place-content-start py-10 place-items-center gap-y-5">
+      <motion.div className="w-full h-full px-10 pb-5 grid md:grid-cols-2 grid-cols-1 place-content-start py-5 md:py-10 place-items-center gap-y-5">
           {project.map((item,index) => {
             return <ProjectInfo item={item} index={index} setIdx={setIdx}/>
           })}
