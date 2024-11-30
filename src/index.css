@@ -20,13 +20,13 @@
 
 @font-face {
     font-family: 'Gatte-Regular';
-    src: url('./src/fonts/GatteModern-Regular.otf');
+    src: url('./fonts/GatteModern-Regular.otf');
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Gatte-Light';
-    src: url('./src/fonts/GatteModern-Light.otf');
+    src: url('./fonts/GatteModern-Light.otf');
     font-style: normal;
 }
 
