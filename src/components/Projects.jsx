@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import {easeOut, motion} from "framer-motion"
 import project from "../data/Project" 
 import ProjectInfo from './ProjectInfo'
+import Nav from "./Nav"
 import { GoDependabot } from "react-icons/go";
 import { MdOutlineComputer } from "react-icons/md";
 import { FaCameraRetro } from "react-icons/fa";
@@ -22,7 +23,7 @@ const icons = [
   },
 ]
 
-const Projects = () => {
+const Projects = ({setPage}) => {
   const [idx , setIdx] = useState(-1);
   const [headingWithIcon , setHeadingWithIcon] = useState([]);
   const insertIcon = () => {
@@ -38,7 +39,12 @@ const Projects = () => {
 
   return (
     <section className='md:w-[100vw] md:h-[100vh]'>
-      <motion.div id="heading" initial={false} animate={{width : 'auto'}} className='h-fit flex justify-center py-5 border-b-[2px]'>
+      <Nav setPage={setPage}/>
+      <motion.div 
+      id="heading" 
+      initial={false} 
+      animate={{width : 'auto'}} 
+      className='h-fit flex justify-center py-5 border-b-[2px]'>
         {idx > -1 ? headingWithIcon.map((char,index) => {
         return <motion.span 
         initial={{opacity : 0}}
@@ -56,7 +62,7 @@ const Projects = () => {
       
       }
       </motion.div>
-      <motion.div className="w-full h-full px-10 pb-5 grid grid-cols-2 place-content-center place-items-center gap-y-5">
+      <motion.div className="w-full h-full px-10 pb-5 grid grid-cols-2 place-content-start py-10 place-items-center gap-y-5">
           {project.map((item,index) => {
             return <ProjectInfo item={item} index={index} setIdx={setIdx}/>
           })}

@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react'
 import {AnimatePresence, motion, stagger, useAnimate} from 'framer-motion'
 import DrawLineOverText from './DrawLineOverText'
+import Nav from './Nav'
 import skills from "../data/Skills"
 import contact from "../data/Contact"
 
 
-const About = () => {
+const About = ({setPage}) => {
   const [contacts, setContacts] = useState(false);
   const [scope, linkAnimate] = useAnimate();
 
@@ -18,6 +19,7 @@ const About = () => {
 
   return (
     <motion.div className='w-[100dvw] h-[100dvh]'>
+      <Nav setPage={setPage} />
       <motion.div 
       className='w-full h-full grid grid-cols-4 grid-rows-3 place-content-between place-items-start md:place-items-center py-10 px-9'>
         <motion.div className='col-span-4 row-span-1 rounded-full border-purple-800 border-2'>
