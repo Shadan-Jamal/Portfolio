@@ -7,6 +7,7 @@ import { GoDependabot } from "react-icons/go";
 import { MdOutlineComputer } from "react-icons/md";
 import { FaCameraRetro } from "react-icons/fa";
 import { GiShamblingZombie } from "react-icons/gi";
+import { CiCalendar } from "react-icons/ci";
 
 const icons = [
   {
@@ -20,6 +21,9 @@ const icons = [
   },
   {
     icon : <FaCameraRetro className='scale-125' color='pink'/>,
+  },
+  {
+    icon : <CiCalendar className='scale-125' color='pink'/>,
   },
 ]
 
@@ -38,7 +42,7 @@ const Projects = ({setPage}) => {
   },[idx])
 
   return (
-    <section className='w-[100dvw] h-auto md:h-[100dvh] md:overflow-hidden'>
+    <section className='w-[100dvw] h-[100dvh] md:max-h-fit md:overflow-auto'>
       <Nav setPage={setPage}/>
       <motion.div 
       id="heading" 
@@ -62,7 +66,7 @@ const Projects = ({setPage}) => {
       
       }
       </motion.div>
-      <motion.div className="w-full h-full px-10 pb-5 grid md:grid-cols-2 grid-cols-1 place-content-start py-5 md:py-10 place-items-center gap-y-5">
+      <motion.div className="w-full max-h-full overflow-auto px-10 pb-5 grid md:grid-cols-2 grid-cols-1 place-content-start py-5 md:py-10 place-items-center gap-y-5">
           {project.map((item,index) => {
             return <ProjectInfo item={item} index={index} setIdx={setIdx}/>
           })}

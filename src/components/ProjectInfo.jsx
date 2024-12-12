@@ -44,7 +44,7 @@ const ProjectInfo = ({item , index, setIdx}) => {
     onHoverEnd={() => setProjectHover(false)}
     initial={{scale : 0}}
     whileInView={{scale : 1}}
-     className='col-span-1 md:w-[70%] w-[115%] max-h-full px-3 py-3  rounded-lg grid place-content-center border-[3px] border-zinc-400 border-dotted'>
+     className=' md:w-[70%] w-[115%] max-h-full px-3 py-3  rounded-lg grid place-content-center border-[3px] border-zinc-400 border-dotted'>
   
       <motion.div 
        className='image relative'>

@@ -22,6 +22,12 @@ const project = [
         link : "https://infinite-carousel-gallery.onrender.com/",
         description : "An image carousel gallery that displays high resolution images.",
         src : "/images/carousel.png"
+    },
+    {
+        name : "Calendar",
+        link : "https://calendar-iota-sandy.vercel.app/",
+        description : "A dynamic calendar that has features like adding and removing events for specific dates.",
+        src : "/images/calendar.png"
     }
 ]
 
