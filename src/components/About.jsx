@@ -22,14 +22,14 @@ const About = ({setPage}) => {
       <Nav setPage={setPage} />
       <motion.div 
       className='w-full h-full grid grid-cols-1 md:grid-cols-4 md:grid-rows-3 place-content-between place-items-start md:place-items-center gap-5 md:gap-0 py-10 px-9'>
-        <motion.div className='md:col-span-4 md:row-span-1 rounded-full border-purple-800 border-2'>
+        <motion.div className='justify-self-start md:ml-32 md:mt-24 md:col-span-4 md:row-span-1 rounded-full border-purple-800 border-2'>
           <img src="/images/about-pic.jpeg" className='rounded-full border w-[15rem] h-[15rem] object-cover brightness-[0.7]' alt="" />
         </motion.div>
 
         {/* About Me */}
         <motion.div className='md:col-span-2 md:row-span-3 col-span-1 max-h-full py-3 px-5'>
           <div className='w-fit mb-3'>
-            <h1 className='hero-profile-font text-start text-3xl md:text-purple-600 text-purple-500'>About Me</h1>
+            <h1 className='hero-profile-font text-start text-3xl font-bold md:text-purple-600 text-purple-500'>About Me</h1>
             <DrawLineOverText />
           </div>
           <p className='light-font text-white text-xl text-wrap whitespace-pre'>
@@ -46,7 +46,7 @@ const About = ({setPage}) => {
           {skills.map((skill,index) => {
             return <motion.div key={index} className='flex flex-row items-center flex-wrap gap-4 w-full max-h-fit'>
               {skill.icon ? skill.icon : <h1 className='text-purple-500 md:text-[4rem] text-[12vw] md:w-20 text-center'>C</h1>}
-              <p className={`text-white md:text-xl hero-profile-font font-bold w-[200px] ps-1 ${index === 7 && 'md:justify-self-end text-[8vw]'}`}>
+              <p className={`text-white md:text-xl hero-profile-font font-bold w-[200px] ps-1 ${index === 8 && 'md:justify-self-end text-[8vw]'}`}>
                 {skill.name}
               <motion.div 
               initial={{width : 0}}
