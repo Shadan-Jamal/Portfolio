@@ -2,7 +2,7 @@ const project = [
     {
         name : "Care",
         link : "https://care-scc.vercel.app/",
-        description : "A fullstack platform build for college student to reach out to their faculties for mental health support.",
+        description : "A fullstack platform build for college students to reach out to their faculties for mental health support.",
         src : "/images/care.png"
     },
     {
