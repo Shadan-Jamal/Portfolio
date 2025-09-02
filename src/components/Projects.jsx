@@ -8,8 +8,16 @@ import { MdOutlineComputer } from "react-icons/md";
 import { FaCameraRetro } from "react-icons/fa";
 import { GiShamblingZombie } from "react-icons/gi";
 import { CiCalendar } from "react-icons/ci";
+import { RiMentalHealthFill } from "react-icons/ri";
+import { MdMovie } from "react-icons/md";
 
 const icons = [
+  {
+    icon : <RiMentalHealthFill className='scale-125' color='pink'/>,
+  },
+  {
+    icon : <MdMovie className='scale-125' color='pink'/>,
+  },
   {
     icon : <GoDependabot className='scale-125' color='pink'/>,
   },

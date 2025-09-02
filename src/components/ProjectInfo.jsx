@@ -1,6 +1,7 @@
 import { useState,useEffect } from "react";
 import {motion,useAnimate,stagger} from "framer-motion"
 import DrawLineOverText from "./DrawLineOverText"
+import { a } from "framer-motion/client";
 
 const ProjectInfo = ({item , index, setIdx}) => {
     const [projectHover, setProjectHover] = useState(false);
@@ -35,7 +36,7 @@ const ProjectInfo = ({item , index, setIdx}) => {
     
       animateCard();
     }, [projectHover, projectAnimate]);
-  
+    console.log(name)
     return <motion.div
      ref={scope} 
      key={index}
@@ -60,7 +61,7 @@ const ProjectInfo = ({item , index, setIdx}) => {
         {name.split("").map((char) => {
           return <motion.span 
             initial={{y : 100, opacity : 0}}
-            className='char md:text-3xl text-[5vw] hero-profile-font text-white font-bold'>{char}
+            className={`char md:text-3xl text-[5vw] hero-profile-font ${name === "Care" ? "text-black" : "text-white"} font-bold`}>{char}
             <DrawLineOverText />
             </motion.span>
           })}
@@ -68,10 +69,10 @@ const ProjectInfo = ({item , index, setIdx}) => {
         
           <motion.p id='image-info'
           initial={{opacity : 0}}
-          className='hover:cursor-default text-[3.5vw] md:text-lg font-extrabold text-white light-font'>
+          className={`hover:cursor-default text-[3.5vw] md:text-lg font-extrabold ${name === "Care" ? "text-black" : "text-white"} light-font`}>
             {description}<br/><br/>
   
-          <a href={link} target="_blank" className='hover:text-purple-800 hover:underline hover:font-extrabold text-white hero-profile-font'>
+          <a href={link} target="_blank" className={`hover:text-purple-800 hover:underline hover:font-extrabold ${name === "Care" ? "text-black" : "text-white"} hero-profile-font`}>
             Check out the live link!
           </a>
           </motion.p>

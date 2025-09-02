@@ -1,5 +1,17 @@
 const project = [
     {
+        name : "Care",
+        link : "https://care-scc.vercel.app/",
+        description : "A fullstack platform build for college student to reach out to their faculties for mental health support.",
+        src : "/images/care.png"
+    },
+    {
+        name : "Movie Matcher",
+        link : "https://movie-recommendation-frontend-three.vercel.app/",
+        description : "An atypical movie recommendation system that suggests movies based on plot overviews or user's emotions.",
+        src : "/images/movie-matcher.png"
+    },
+    {
         name : "AI-Prompter",
         link : "https://ai-prompter.onrender.com/",
         description : "Powered by Google Gemini's API, utilize this prompt to engage in fun conversations with a ChatBot. Play games, share stories, imitate comic book characters and the list goes on..",
