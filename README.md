@@ -1,8 +1,36 @@
-# React + Vite
+# Astro + React + TypeScript + shadcn/ui
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a template for a new Astro project with React, TypeScript, and shadcn/ui.
 
-Currently, two official plugins are available:
+## Adding components
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+To add components to your app, run the following command:
+
+```bash
+npx shadcn@latest add button
+```
+
+This will place the ui components in the `src/components` directory.
+
+## Using components
+
+To use the components in your app, import them in an `.astro` file:
+
+```astro
+---
+import { Button } from "@/components/ui/button"
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Astro App</title>
+  </head>
+  <body>
+    <div class="grid h-screen place-items-center content-center">
+      <Button>Button</Button>
+    </div>
+  </body>
+</html>
+```

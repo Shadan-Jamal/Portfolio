@@ -1,0 +1,13 @@
+---
+/*
+  Astro pages are HTML templates. The script above the fence runs at build
+  time. Workstation is a React island: client:load ships it to the browser
+  so the file tree can respond to clicks.
+*/
+import Layout from "@/layouts/main.astro"
+import Workstation from "@/components/portfolio/Workstation"
+---
+
+<Layout>
+  <Workstation client:idle />
+</Layout>
